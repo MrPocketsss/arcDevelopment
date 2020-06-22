@@ -29,6 +29,7 @@ export default function CustomSoftware(props) {
   const theme = useTheme();
   const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
   const matchesSM = useMediaQuery(theme.breakpoints.down("sm"));
+  const matchesXS = useMediaQuery(theme.breakpoints.down("xs"));
 
   // options for the animation
   const documentsOptions = {
@@ -76,6 +77,7 @@ export default function CustomSoftware(props) {
         direction="row"
         justify={matchesMD ? "center" : undefined}
         className={classes.rowContainer}
+        style={{ marginTop: matchesXS ? "1em" : "2em" }}
       >
         <Hidden mdDown>
           <Grid
@@ -349,7 +351,7 @@ export default function CustomSoftware(props) {
         justify="space-around"
         alignItems={matchesMD ? "center" : undefined}
         className={classes.rowContainer}
-        style={{ marginBottom: "10em" }}
+        style={{ marginBottom: "20em" }}
       >
         <Grid
           item
